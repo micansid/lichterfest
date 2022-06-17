@@ -14,6 +14,9 @@ bier_count = 0
 pfand_count = 0
 soft_count = 0
 
+screen.value = calc()
+screen2.value = desc()
+
 function calc() {
     let result = 0
     for (let i = 0; i < button_texts.length; i++) {
@@ -25,11 +28,15 @@ function calc() {
 
 function desc() {
     let result = ''
+    let elements = 0
     for (let i = 0; i < button_texts.length; i++) {
-        if (i > 0) {
-            result = result + ' | '
+        if (counts[button_texts[i]]) {
+            if (elements > 0) {
+                result = result + ' | '
+            }
+            elements = elements + 1
+            result = result + counts[button_texts[i]] + ' ' + button_texts[i]
         }
-        result = result + counts[button_texts[i]] + ' ' + button_texts[i]
     }
     //return bier_count + ' Bier | ' + pfand_count + ' Pfand | ' + soft_count + ' Soft'
     return result
