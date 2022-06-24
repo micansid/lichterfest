@@ -32,7 +32,7 @@ function desc() {
     for (let i = 0; i < button_texts.length; i++) {
         if (counts[button_texts[i]]) {
             if (elements > 0) {
-                result = result + ' | '
+                result = result + '\n'
             }
             elements = elements + 1
             result = result + counts[button_texts[i]] + ' ' + button_texts[i]
