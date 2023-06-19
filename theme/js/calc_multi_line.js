@@ -35,7 +35,7 @@ function desc() {
                 result = result + '\n'
             }
             elements = elements + 1
-            result = result + counts[button_texts[i]] + ' ' + button_texts[i]
+            result = result + counts[button_texts[i]] + 'x ' + button_texts[i]
         }
     }
     //return bier_count + ' Bier | ' + pfand_count + ' Pfand | ' + soft_count + ' Soft'
